@@ -1,0 +1,14 @@
+# common
+node_modules
+.vscode
+
+# env variables
+.env
+.env.local
+.env.development
+.env.production
+
+# dev
+build
+certificates
+out

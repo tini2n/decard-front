@@ -1,0 +1,55 @@
+{
+	"name": "decard_front",
+	"description": "**DECARD** brand website. React / NextJS. Developed with ❤️",
+	"version": "1.0.0",
+	"main": "src/index.tsx",
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"build:prod": "next build && next export",
+		"start:dev": "next build && NODE_ENV=development PORT=3000 node server.js",
+		"start": "next start",
+		"lint": "next lint",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@ssh.dev.azure.com:v3/devi25s/Peppa/decard_front"
+	},
+	"keywords": [
+		"decard",
+		"brand"
+	],
+	"author": "Vlady aka Hustler Engineer",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.17.2",
+		"@lingui/cli": "^3.13.2",
+		"@lingui/loader": "^3.13.2",
+		"@lingui/macro": "^3.13.2",
+		"@svgr/webpack": "^6.2.1",
+		"@types/styled-components": "^5.1.22",
+		"babel-plugin-macros": "^3.1.0",
+		"babel-plugin-styled-components": "^2.0.2",
+		"eslint": "8.8.0",
+		"eslint-config-next": "12.0.10"
+	},
+	"dependencies": {
+		"@lingui/react": "^3.13.2",
+		"@mdx-js/loader": "^2.0.0",
+		"@mdx-js/react": "^2.0.0",
+		"@next/mdx": "^12.0.10",
+		"@types/react": "^17.0.39",
+		"babel-preset-next": "^1.4.0",
+		"make-plural": "^6.2.2",
+		"next": "^12.0.10",
+		"next-compose-plugins": "^2.2.1",
+		"next-images": "^1.8.4",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"sass": "^1.49.7",
+		"styled-components": "^5.3.3",
+		"typescript": "^4.5.5",
+		"uuid": "^8.3.2"
+	}
+}
