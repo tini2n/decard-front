@@ -17,11 +17,11 @@ const getBuildConfig = (...args) => {
 			// customKey: 'my-value', pass custom runtime env variables
 		},
 		// basePath: '/path', // base site path ex: 'example.com/path'
-		// i18n: {
-		// 	locales: ['en', 'ua', 'da', 'pseudo'],
-		// 	defaultLocale: 'en',
-		// 	localeDetection: false,
-		// }, // static export will not work with i18n 😢
+		i18n: {
+			locales: ['en', 'ua', 'da'],
+			defaultLocale: 'en',
+			localeDetection: false,
+		}, // static export will not work with i18n 😢
 		distDir: 'build',
 		pageExtensions: ['jsx', 'js', 'tsx', 'ts'],
 		// assetPrefix: isProd ? 'https://cdn.mydomain.com' : '', // CDN assets prefix
