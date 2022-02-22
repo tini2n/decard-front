@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { connect, useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { changeLogoSize } from 'lib/store/actions/ui';
 
@@ -42,7 +42,6 @@ const DefaultPage: React.FunctionComponent = ({ children }) => {
 
 	useEffect(() => {
 		const headerEl = document.getElementById('header');
-		// console.log(headerEl?.offsetHeight);
 
 		headerEl?.addEventListener('transitionend', getHeaderHeight);
 
@@ -70,7 +69,7 @@ const DefaultPage: React.FunctionComponent = ({ children }) => {
 		<S.DefaultPage>
 			<Sidebar isLogoShrinked={isLogoShrinked} />
 			<S.Wrapper>
-				<S.Main headerHeight={headerHeight}>
+				<S.Main headerHeight={headerHeight} isLogoShrinked={isLogoShrinked}>
 					<S.Content>{children}</S.Content>
 					<Footer />
 				</S.Main>
@@ -79,5 +78,4 @@ const DefaultPage: React.FunctionComponent = ({ children }) => {
 	);
 };
 
-// export default connect(mapStateToProps, mapDispatchToProps)(DefaultPage);
-export default DefaultPage;
+export { DefaultPage };

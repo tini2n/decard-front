@@ -16,8 +16,7 @@ import { initTranslation } from 'lib/utils/localization';
 import { Locales } from 'lib/constants';
 import { Colors } from 'lib/constants/styles';
 
-import DefaultPage from 'ui/templates/DefaultPage';
-
+import { DefaultPage } from 'ui/templates';
 import { Head } from 'ui/organisms';
 
 const GlobalStyle = createGlobalStyle`

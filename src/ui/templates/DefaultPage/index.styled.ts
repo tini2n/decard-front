@@ -16,14 +16,22 @@ const S = {
 		flex-grow: 1;
 		justify-content: end;
 	`,
-	Main: styled.main.attrs(() => ({ id: `main` }))<{ headerHeight: number }>`
+	Main: styled.main.attrs(() => ({ id: `main` }))<{ headerHeight: number; isLogoShrinked: boolean }>`
 		display: flex;
 		flex-direction: column;
 		flex-grow: 1;
 		max-width: calc(${Sizes.COL_WIDTH * 9} / ${Sizes.PAGE_MAX_WIDTH} * 100%);
 
 		transition: transform 0.4s ease;
-		transform: translateY(${(p) => p.headerHeight || 0}px);
+		transform: translateY(
+			${(p) => {
+				if (!p.isLogoShrinked) {
+					return p.headerHeight || 0;
+				} else {
+					return 90;
+				}
+			}}px
+		);
 	`,
 	Content: styled.main.attrs(() => ({ id: `content` }))`
 		flex-grow: 1;

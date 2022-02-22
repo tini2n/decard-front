@@ -55,12 +55,4 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 	};
 };
 
-const mapStateToProps = (state) => ({
-	ui: state.ui,
-});
-
-const mapDispatchToProps = {
-	changeLogoSize,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Index);
+export default Index;
