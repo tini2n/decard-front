@@ -16,7 +16,7 @@ export function LanguageSwitcher() {
 
 	useEffect(() => {
 		router.push(router.pathname, router.pathname, { locale });
-	}, [locale, router]);
+	}, [locale]);
 
 	return (
 		<select value={locale} onChange={(evt) => setLocale(evt.target.value as Locales)}>

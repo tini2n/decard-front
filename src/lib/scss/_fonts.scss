@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+font-face {
+	font-family: 'Helvetica Neue';
+	src: url('../fonts/HelveticaNeue-Regular.eot') format('eot'), url('/fonts/HelveticaNeue-Regular.ttf') format('ttf'),
+		url('/fonts/HelveticaNeue-Regular.woff') format('woff'),
+		url('/fonts/HelveticaNeue-Regular.woff2') format('woff2');
+	font-weight: 400;
+}
+
+font-face {
+	font-family: 'Helvetica Neue';
+	src: url('../fonts/HelveticaNeue-Italic.eot') format('eot'), url('/fonts/HelveticaNeue-Italic.ttf') format('ttf'),
+		url('/fonts/HelveticaNeue-Italic.woff') format('woff'), url('/fonts/HelveticaNeue-Italic.woff2') format('woff2');
+	font-weight: 400;
+	font-style: italic;
+}
+
+$font-family-monospace: 'IBM Plex Mono', monospace;
+$font-family-sans-serif: 'Helvetica Neue', Arial, sans-serif;

@@ -1,9 +1,11 @@
 import { GetServerSideProps } from 'next';
-import styled from 'styled-components';
 import Link from 'next/link';
+import { connect } from 'react-redux';
 import { Trans } from '@lingui/macro';
+import styled from 'styled-components';
 
 import { Environments } from 'lib/constants';
+import { changeLogoSize } from 'lib/store/actions/ui';
 
 import { loadTranslation } from 'lib/utils/localization';
 
@@ -13,14 +15,31 @@ const StyledParagraph = styled.p`
 	color: red;
 `;
 
-const Index = () => {
+const Index = (props) => {
+	// console.log(props);
+	const TestingParagraph = () => (
+		<StyledParagraph style={{ fontSize: '5rem' }}>
+			<Trans id='heading'>We are making Things!</Trans>
+		</StyledParagraph>
+	);
+
 	return (
 		<>
 			<h1>Welcome to Decard</h1>
 			<LanguageSwitcher />
-			<StyledParagraph>
-				<Trans id='heading'>We are making Things!</Trans>
-			</StyledParagraph>
+			<button onClick={props.changeLogoSize}>test</button>
+			<TestingParagraph />
+			<TestingParagraph />
+			<TestingParagraph />
+			<TestingParagraph />
+			<TestingParagraph />
+			<TestingParagraph />
+			<TestingParagraph />
+			<TestingParagraph />
+			<TestingParagraph />
+			<TestingParagraph />
+			<TestingParagraph />
+			<TestingParagraph />
 			<Link href='/test'>test</Link>
 		</>
 	);
@@ -36,4 +55,12 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 	};
 };
 
-export default Index;
+const mapStateToProps = (state) => ({
+	ui: state.ui,
+});
+
+const mapDispatchToProps = {
+	changeLogoSize,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Index);
