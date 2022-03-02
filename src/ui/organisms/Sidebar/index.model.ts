@@ -1,3 +1,1 @@
-export interface Props {
-	isLogoShrinked: boolean;
-}
+export interface Props {}

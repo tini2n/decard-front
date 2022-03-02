@@ -7,8 +7,12 @@ const S = {
 		display: flex;
 		flex-direction: column;
 		height: 100%;
-		max-width: ${Sizes.PAGE_MAX_WIDTH}px;
-		margin: 0 auto;
+
+		#logo {
+			position: fixed;
+			width: calc(${Sizes.COL_WIDTH * 3} / ${Sizes.PAGE_MAX_WIDTH} * 100%);
+			z-index: 999;
+		}
 	`,
 	Wrapper: styled.div.attrs(() => ({ id: `` }))`
 		display: flex;
@@ -16,22 +20,13 @@ const S = {
 		flex-grow: 1;
 		justify-content: end;
 	`,
-	Main: styled.main.attrs(() => ({ id: `main` }))<{ headerHeight: number; isLogoShrinked: boolean }>`
+	Main: styled.main.attrs(() => ({ id: `main` }))<{ headerHeight?: number; isLogoShrinked?: boolean }>`
 		display: flex;
 		flex-direction: column;
 		flex-grow: 1;
-		max-width: calc(${Sizes.COL_WIDTH * 9} / ${Sizes.PAGE_MAX_WIDTH} * 100%);
-
-		transition: transform 0.4s ease;
-		transform: translateY(
-			${(p) => {
-				if (!p.isLogoShrinked) {
-					return p.headerHeight || 0;
-				} else {
-					return 90;
-				}
-			}}px
-		);
+		width: calc(${Sizes.COL_WIDTH * 9} / ${Sizes.PAGE_MAX_WIDTH} * 100%);
+		overflow: hidden;
+		padding: 0 5px;
 	`,
 	Content: styled.main.attrs(() => ({ id: `content` }))`
 		flex-grow: 1;

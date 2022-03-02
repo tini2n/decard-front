@@ -13,6 +13,6 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/pages/index.tsx:22
+#: src/pages/index.tsx:19
 msgid "heading"
 msgstr "Vi laver ting!"

@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { Link } from 'ui/atoms';
 
 const S = {
-	Wrapper: styled(Link)`
+	Logo: styled(Link)`
 		display: block;
 		padding: 22px 0;
 		margin: 0 10px;
-        border-bottom: 1px solid #000;
+		border-bottom: 1px solid #000;
 	`,
 };
 

@@ -1,75 +1,20 @@
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
 
-import { changeLogoSize } from 'lib/store/actions/ui';
-
-import { Sidebar, Footer } from 'ui/organisms';
+import { Header, Sidebar, Footer } from 'ui/organisms';
+import { Logo } from 'ui/molecules';
 
 import { S } from './index.styled';
 
-const selectUI = (state) => state.ui;
-
 const DefaultPage: React.FunctionComponent = ({ children }) => {
-	// const dispatch = useDispatch();
-	// const uiStore = useSelector(selectUI);
-
-	const [isLogoShrinked, setIsLogoShrinked] = useState(false);
-	const [headerHeight, setHeaderHeight] = useState(0);
-	// console.log(isLogoShrinked);
-
-	const handleScroll = () => {
-		const offset = 50;
-
-		// if (window.pageYOffset > offset && !uiStore.isLogoShrinked) {
-		// 	dispatch(changeLogoSize(true));
-		// } else {
-		// 	dispatch(changeLogoSize(false));
-		// 	console.log(window.pageYOffset);
-		// }
-
-		if (window.pageYOffset > offset && !isLogoShrinked) {
-			setIsLogoShrinked(true);
-		} else {
-			setIsLogoShrinked(false);
-		}
-	};
-
-	const getHeaderHeight = () => {
-		console.log(document.getElementById('header')?.offsetHeight);
-		const headerEl = document.getElementById('header');
-		setHeaderHeight(headerEl?.offsetHeight || 0);
-	};
-
-	useEffect(() => {
-		const headerEl = document.getElementById('header');
-
-		headerEl?.addEventListener('transitionend', getHeaderHeight);
-
-		return () => {
-			headerEl?.removeEventListener('transitionend', getHeaderHeight);
-		};
-	}, [isLogoShrinked]);
-
-	useEffect(() => {
-		const headerEl = document.getElementById('header');
-		setHeaderHeight(headerEl?.offsetHeight || 0);
-
-		const handleScrollEvent = () => {
-			handleScroll();
-		};
-
-		window.addEventListener('scroll', handleScrollEvent);
-
-		return () => {
-			window.removeEventListener('scroll', handleScrollEvent);
-		};
-	}, []);
+	const router = useRouter();
 
 	return (
 		<S.DefaultPage>
-			<Sidebar isLogoShrinked={isLogoShrinked} />
+			{router.pathname === '/' && <Header style={{ pointerEvents: 'none' }} />}
+			<Logo id='logo' />
 			<S.Wrapper>
-				<S.Main headerHeight={headerHeight} isLogoShrinked={isLogoShrinked}>
+				<Sidebar />
+				<S.Main>
 					<S.Content>{children}</S.Content>
 					<Footer />
 				</S.Main>

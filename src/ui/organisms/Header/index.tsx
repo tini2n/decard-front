@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
-
 import { Logo } from 'ui/molecules';
 
 import { Props } from './index.model';
 import { S } from './index.styled';
 
-const Header: React.FunctionComponent<Props> = ({ isLogoShrinked = false }) => {
+const Header: React.FunctionComponent<Props> = ({ ...rest }) => {
 	return (
-		<S.Header className={`${isLogoShrinked ? 'is-shrinked' : ''}`}>
+		<S.Header {...rest}>
 			<Logo />
 		</S.Header>
 	);

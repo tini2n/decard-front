@@ -2,11 +2,11 @@ import { S } from './index.styled';
 
 import LogoIcon from 'lib/icons/decard_logo_wordmark.svg';
 
-const Logo = ({}) => {
+const Logo = ({ ...rest }) => {
 	return (
-		<S.Wrapper href='/'>
+		<S.Logo {...rest} href='/'>
 			<LogoIcon />
-		</S.Wrapper>
+		</S.Logo>
 	);
 };
 
