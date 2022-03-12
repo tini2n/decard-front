@@ -1,15 +1,21 @@
 import styled from 'styled-components';
 
-import { Colors } from 'lib/constants/styles';
+import { Colors, Sizes } from 'lib/constants/styles';
 
 import { Link } from 'ui/atoms';
 
 const S = {
-	Navigation: styled.nav.attrs(() => ({ className: `navigation` }))`
+	Navigation: styled.nav.attrs(() => ({ id: `navigation` }))<{ fixedOffset?: number }>`
 		font-family: 'IBM Plex Mono', monospace;
 		font-size: 36px;
 		line-height: 48px;
 		padding: 40px 0;
+
+		&.fixed {
+			position: fixed;
+			top: ${(p) => p.fixedOffset}px;
+			width: calc(${Sizes.COL_WIDTH * 3} / ${Sizes.PAGE_MAX_WIDTH} * 100%);
+		}
 	`,
 	Link: styled(Link)<{ className?: string }>`
 		display: block;

@@ -2,11 +2,11 @@ import { useRouter } from 'next/router';
 
 import { S } from './index.styled';
 
-const Navigation = () => {
+const Navigation = ({ fixedOffset }) => {
 	const router = useRouter();
 
 	return (
-		<S.Navigation>
+		<S.Navigation fixedOffset={fixedOffset}>
 			<S.Link href='/products' className={router.pathname === '/products' ? 'active' : ''}>
 				PRODUCTS
 			</S.Link>
