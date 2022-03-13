@@ -14,5 +14,5 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/pages/index.tsx:19
-msgid "heading"
-msgstr "Ми робимо Вещі!"
+#~ msgid "heading"
+#~ msgstr "Ми робимо Вещі!"
