@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next';
 import { Row, Col } from 'react-bootstrap';
-import { Trans } from '@lingui/macro';
+// import { Trans } from '@lingui/macro';
 import styled from 'styled-components';
 
 import { Environments } from 'lib/constants';
@@ -14,11 +14,11 @@ const StyledParagraph = styled.p`
 `;
 
 const Index = (props) => {
-	const TestingParagraph = () => (
-		<StyledParagraph style={{ fontSize: '5rem' }}>
-			<Trans id='heading'>We are making Things!</Trans>
-		</StyledParagraph>
-	);
+	// const TestingParagraph = () => (
+	// 	<StyledParagraph style={{ fontSize: '5rem' }}>
+	// 		<Trans id='heading'>We are making Things!</Trans>
+	// 	</StyledParagraph>
+	// );
 
 	return (
 		<ContentWrapper>
