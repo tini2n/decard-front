@@ -1,0 +1,32 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user/decard-front
+
+permissions:
+  - object: /
+    pattern: "**"
+    owner: ec2-user
+    group: ec2-user
+
+hooks:
+  ApplicationStop:
+    - location: bin/app-stop.sh
+      timeout: 300
+      runas: ec2-user
+
+  BeforeInstall:
+    - location: bin/before-install.sh
+      timeout: 300
+      runas: ec2-user
+
+  AfterInstall:
+    - location: bin/after-install.sh
+      timeout: 300
+      runas: ec2-user
+
+  ApplicationStart:
+    - location: bin/app-start.sh
+      timeout: 300
+      runas: ec2-user
