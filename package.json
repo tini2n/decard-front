@@ -10,8 +10,6 @@
 		"start:dev": "NODE_ENV=development npm run lingui:extract && next build && NODE_ENV=development PORT=3000 node server.js",
 		"start:prod": "NODE_ENV=production PORT=8080 node server.js",
 		"start": "NODE_ENV=production node server.js",
-		"start:http": "NODE_ENV=production PORT=80 node server.js",
-		"start:https": "NODE_ENV=production PORT=443 node server.js",
 		"lingui:extract": "lingui extract",
 		"lingui:compile": "lingui compile",
 		"lint": "next lint",
