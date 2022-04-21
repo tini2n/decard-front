@@ -1,9 +1,23 @@
 $headings-font-family: $font-family-monospace;
 $font-family-base: $font-family-sans-serif;
 
-$font-size-root: 18px;
+$font-size-root: 16px;
 $font-size-base: 1rem !default;
 
 $grid-gutter-width: 40px !default;
+
+$spacer: 1rem !default;
+
+$spacers: (
+	0: 0,
+	1: $spacer * 0.5,
+	2: $spacer,
+	3: $spacer * 1.5,
+	4: $spacer * 2.25,
+	45: $spacer * 3,
+	5: $spacer * 3.5,
+	6: $spacer * 4.5,
+	7: $spacer * 6.5,
+) !default;
 
 @import '~bootstrap/scss/bootstrap.scss';

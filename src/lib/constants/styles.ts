@@ -9,3 +9,8 @@ export enum Colors {
 	BLACK = '#000',
 	WHITE = '#fff',
 }
+
+export enum Fonts {
+	MONOSPACE = `"IBM Plex Mono", monospace`,
+	SANS_SERIF = `'Helvetica Neue', Arial, sans-serif`,
+}

@@ -5,3 +5,4 @@ export { Sidebar } from './Sidebar';
 export { Footer } from './Footer';
 export { Socials } from './Socials';
 export { LanguageSwitcher } from './LanguageSwitcher';
+export { PostsList } from './PostsList';

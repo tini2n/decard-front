@@ -27,12 +27,6 @@ const DefaultPage: React.FunctionComponent = ({ children }) => {
 
 		setNavigationOffset(logoDOM.offsetHeight);
 
-		if (router.pathname === '/') {
-			navigationDOM?.classList.remove('fixed');
-		} else {
-			navigationDOM?.classList.add('fixed');
-		}
-
 		window.addEventListener('scroll', () => {
 			scrollHandler(navigationDOM, logoDOM, headerDOM);
 		});

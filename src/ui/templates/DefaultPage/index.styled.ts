@@ -10,7 +10,7 @@ const S = {
 
 		#logo {
 			position: fixed;
-			width: calc((${Sizes.COL_WIDTH * 3} / ${Sizes.PAGE_MAX_WIDTH} * 100%) - 20px);
+			width: calc((${Sizes.COL_WIDTH * 3} / ${Sizes.PAGE_MAX_WIDTH} * 100%) - 10px);
 			z-index: 999;
 		}
 	`,

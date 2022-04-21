@@ -5,8 +5,8 @@ import { Link } from 'ui/atoms';
 const S = {
 	Logo: styled(Link)`
 		display: block;
-		padding: 22px 0;
-		margin: 0 10px;
+		padding: 1.5rem 0;
+		margin: 0 5px;
 		border-bottom: 1px solid #000;
 	`,
 };

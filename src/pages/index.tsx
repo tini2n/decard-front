@@ -9,19 +9,9 @@ import { loadTranslation } from 'lib/utils/localization';
 
 import { ContentWrapper, FeatureImage, LabeledTitle, FeatureText, FeatureLink } from 'ui/molecules';
 
-const StyledParagraph = styled.p`
-	color: red;
-`;
-
 const Index = (props) => {
-	// const TestingParagraph = () => (
-	// 	<StyledParagraph style={{ fontSize: '5rem' }}>
-	// 		<Trans id='heading'>We are making Things!</Trans>
-	// 	</StyledParagraph>
-	// );
-
 	return (
-		<ContentWrapper>
+		<ContentWrapper style={{ padding: '40px 0' }}>
 			<p className='heading' style={{ marginBottom: '90px' }}>
 				A Fintech company that creates a reliable ecosystem around an alternative monetary environment, helping
 				companies of all sizes and in all industries run at their best.

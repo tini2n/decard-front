@@ -6,3 +6,4 @@ export { FeatureText } from './FeatureText';
 export { FeatureLink } from './FeatureLink';
 export { ProductItem } from './ProductItem';
 export { TeamMember } from './TeamMember';
+export { Post } from './Post';
