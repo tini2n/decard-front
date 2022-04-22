@@ -1,0 +1,24 @@
+<svg width="142" height="82" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#a)">
+        <path d="m0 41.02 11.843-6.831 47.333 27.32v13.66L47.333 82 0 54.68V41.02Z" fill="#fff" />
+        <path
+            d="m59.177 20.49-11.843-6.83-35.49 20.53v13.66l11.843 6.83 35.49-20.49v-13.7ZM142.001 41.02l-11.843-6.831-47.334 27.32v13.66L94.667 82l47.334-27.32V41.02Z"
+            fill="#fff" />
+        <path d="m82.824 20.49 11.843-6.83 35.491 20.53v13.66l-11.805 6.83-35.529-20.49v-13.7Z" fill="#fff" />
+        <path d="M47.334 68.34V27.32l11.843-6.83 11.843 6.83v41.02l-11.843 6.83-11.843-6.83Z" fill="url(#b)" />
+        <path d="M59.176 20.49 94.666 0l11.843 6.83v13.66l-35.49 20.53-11.843-6.83v-13.7Z" fill="url(#c)" />
+    </g>
+    <defs>
+        <linearGradient id="b" x1="59.171" y1="75.18" x2="59.171" y2="20.503" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#D6D6D6" />
+            <stop offset="1" stop-color="#D6D6D6" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="c" x1="59.17" y1="34.172" x2="106.514" y2="6.847" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#D6D6D6" stop-opacity="0" />
+            <stop offset="1" stop-color="#D6D6D6" />
+        </linearGradient>
+        <clipPath id="a">
+            <path fill="#fff" d="M0 0h142v82H0z" />
+        </clipPath>
+    </defs>
+</svg>

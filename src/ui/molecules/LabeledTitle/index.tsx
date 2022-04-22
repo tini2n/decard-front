@@ -1,7 +1,7 @@
 import { S } from './index.styled';
 import { Props } from './index.model';
 
-const LabeledTitle: React.FunctionComponent<Props> = ({ level = 'h1', label, children, ...rest }) => {
+const LabeledTitle: React.FunctionComponent<Props> = ({ level = 'h1', label, children, className = '', ...rest }) => {
 	let Title: React.FunctionComponent;
 
 	switch (level) {
@@ -23,7 +23,7 @@ const LabeledTitle: React.FunctionComponent<Props> = ({ level = 'h1', label, chi
 	}
 
 	return (
-		<S.Wrapper {...rest}>
+		<S.Wrapper className={className} {...rest}>
 			<label>{label}</label>
 			<Title>{children}</Title>
 		</S.Wrapper>

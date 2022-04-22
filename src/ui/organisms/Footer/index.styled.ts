@@ -10,14 +10,9 @@ const S = {
 		border-top: 1px solid ${Colors.BLACK};
 		height: ${Sizes.FOOTER_HEIGHT}px;
 
-		a {
+		p {
 			font-size: 24px;
 			color: ${Colors.BLACK};
-			text-decoration: none;
-
-			&:not(:last-child) {
-				margin-right: 30px;
-			}
 		}
 	`,
 };

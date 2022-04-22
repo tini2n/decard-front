@@ -17,7 +17,7 @@ const Index = (props) => {
 				companies of all sizes and in all industries run at their best.
 			</h1>
 			<FeatureImage src='/images/nggyu.png' alt='Feature Astley' />
-			<LabeledTitle label='Mission' level='h2' style={{ marginBottom: '70px' }}>
+			<LabeledTitle label='Mission' level='h2' className='mb-65'>
 				Empower Human Wellbeing in the New World of Finance
 			</LabeledTitle>
 			<Row>

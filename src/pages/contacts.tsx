@@ -14,20 +14,16 @@ const Contacts = () => {
 
 	return (
 		<ContentWrapper style={{ paddingTop: '0' }}>
-			<Heading className='mb-6'>Demonstrate the Capabilities of Your Company as a Technology Leader</Heading>
+			<Heading className='mb-65 pb-65'>
+				Demonstrate the Capabilities of Your Company as a Technology Leader
+			</Heading>
 			<Row className='mb-6'>
 				<Col md={6}>
-					<a href='mailto:info@decard.solutions' target='_blank' rel='noreferrer' className='d-block heading'>
-						info@decard.solutions
-					</a>
-					<a href='mailto:work@decard.solutions' target='_blank' rel='noreferrer' className='d-block heading'>
-						work@decard.solutions
-					</a>
+					<p className='d-block heading m-0'>info@decard.solutions</p>
+					<p className='d-block heading m-0'>work@decard.solutions</p>
 				</Col>
 				<Col md={6}>
-					<a href='tel:+30878402193' className='d-block heading'>
-						(+3087)840 21 93
-					</a>
+					<p className='d-block heading m-0'>(+3087)840 21 93</p>
 				</Col>
 			</Row>
 			<p className='heading' style={{ marginBottom: '1.25rem' }}>

@@ -7,3 +7,4 @@ export { FeatureLink } from './FeatureLink';
 export { ProductItem } from './ProductItem';
 export { TeamMember } from './TeamMember';
 export { Post } from './Post';
+export { PositionItem } from './PositionItem';

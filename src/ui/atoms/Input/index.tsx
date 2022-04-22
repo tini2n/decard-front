@@ -6,7 +6,11 @@ const Input = ({ type = 'text', placeholder = '', label, id = '', register, ...r
 	return (
 		<Form.Group>
 			{label && <S.Label htmlFor={id}>{label}</S.Label>}
-			<S.Control type={type} placeholder={placeholder} id={id} {...register} {...rest} />
+			{type === 'textarea' ? (
+				<S.Control as='textarea' placeholder={placeholder} id={id} {...register} {...rest} />
+			) : (
+				<S.Control type={type} placeholder={placeholder} id={id} {...register} {...rest} />
+			)}
 		</Form.Group>
 	);
 };

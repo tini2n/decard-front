@@ -18,10 +18,8 @@ const Footer = ({}) => {
 				</p>
 			) : (
 				<>
-					<a href='mailto:info@decard.de' target='_blank'>
-						info@decard.de
-					</a>
-					<a href='tel:+30878402193'>(+3087)840 21 93</a>
+					<p className='mb-0 me-3'>info@decard.de</p>
+					<p className='mb-0'>(+3087)840 21 93</p>
 				</>
 			)}
 		</S.Footer>

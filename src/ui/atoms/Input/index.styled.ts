@@ -16,8 +16,18 @@ const S = {
 		font-size: 36px;
 		line-height: 42px;
 
+		${(p) =>
+			p.as === 'textarea' &&
+			`
+			display: block;
+			width: 100%;
+			min-height: 220px;
+			resize: none;
+		`}
+
 		:focus {
 			background: transparent;
+			box-shadow: 0 0 0 0px rgb(13 110 253 / 25%);
 		}
 
 		::placeholder {

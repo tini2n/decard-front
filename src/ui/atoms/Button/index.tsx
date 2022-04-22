@@ -2,7 +2,7 @@ import { S } from './index.styled';
 
 import ArrowIcon from 'lib/icons/arrow.svg';
 
-const Button = ({ children, type = '', withArrow, ...rest }) => {
+const Button = ({ children, type = '', withArrow = false, ...rest }) => {
 	return (
 		<S.Button type={type} {...rest}>
 			{children}
