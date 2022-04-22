@@ -10,6 +10,8 @@ const DefaultPage: React.FunctionComponent = ({ children }) => {
 	const router = useRouter();
 	const [navigationOffset, setNavigationOffset] = useState(0);
 
+	const isPageWithTopGutter = router.pathname !== '/';
+
 	const scrollHandler = (fixedEl, offsetEl, staticOffsetEl) => {
 		if (window.pageYOffset + offsetEl.offsetHeight > fixedEl.offsetTop) {
 			fixedEl.classList.add('fixed');
@@ -41,10 +43,16 @@ const DefaultPage: React.FunctionComponent = ({ children }) => {
 	return (
 		<S.DefaultPage>
 			{router.pathname === '/' && <Header style={{ pointerEvents: 'none' }} />}
+			{isPageWithTopGutter && <Logo id='duplicated-logo' style={{ opacity: 0, pointerEvents: 'none' }} />}
 			<Logo id='logo' />
 			<S.Wrapper>
 				<Sidebar navigationOffset={navigationOffset} />
-				<S.Main>
+				<S.Main
+					style={{
+						marginTop: isPageWithTopGutter ? '-1px' : '0',
+						borderTop: isPageWithTopGutter ? '1px solid #000' : '0',
+					}}
+				>
 					<S.Content>{children}</S.Content>
 					<Footer />
 				</S.Main>

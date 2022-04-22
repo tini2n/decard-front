@@ -26,6 +26,7 @@ const S = {
 		position: relative;
 		padding-bottom: 56.25%;
 		overflow: hidden;
+		border-radius: 1.25rem;
 
 		img {
 			position: absolute;

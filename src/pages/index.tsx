@@ -12,10 +12,10 @@ import { ContentWrapper, FeatureImage, LabeledTitle, FeatureText, FeatureLink } 
 const Index = (props) => {
 	return (
 		<ContentWrapper style={{ padding: '40px 0' }}>
-			<p className='heading' style={{ marginBottom: '90px' }}>
+			<h1 className='heading serif' style={{ marginBottom: '90px' }}>
 				A Fintech company that creates a reliable ecosystem around an alternative monetary environment, helping
 				companies of all sizes and in all industries run at their best.
-			</p>
+			</h1>
 			<FeatureImage src='/images/nggyu.png' alt='Feature Astley' />
 			<LabeledTitle label='Mission' level='h2' style={{ marginBottom: '70px' }}>
 				Empower Human Wellbeing in the New World of Finance

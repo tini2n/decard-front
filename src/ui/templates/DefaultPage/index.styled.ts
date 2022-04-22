@@ -8,10 +8,14 @@ const S = {
 		flex-direction: column;
 		height: 100%;
 
+		#duplicated-logo,
 		#logo {
-			position: fixed;
 			width: calc((${Sizes.COL_WIDTH * 3} / ${Sizes.PAGE_MAX_WIDTH} * 100%) - 10px);
 			z-index: 999;
+		}
+
+		#logo {
+			position: fixed;
 		}
 	`,
 	Wrapper: styled.div.attrs(() => ({ id: `` }))`
@@ -26,10 +30,13 @@ const S = {
 		flex-grow: 1;
 		width: calc(${Sizes.COL_WIDTH * 9} / ${Sizes.PAGE_MAX_WIDTH} * 100%);
 		overflow: hidden;
-		padding: 0 5px;
+		margin: 0 5px;
 	`,
 	Content: styled.main.attrs(() => ({ id: `content` }))`
 		flex-grow: 1;
+		& > div {
+			background: transparent !important;
+		}
 	`,
 };
 

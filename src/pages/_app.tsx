@@ -19,7 +19,7 @@ import { Colors } from 'lib/constants/styles';
 import { DefaultPage } from 'ui/templates';
 import { Head } from 'ui/organisms';
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle<{ pathname?: string }>`
 	html,
 	body {
 		height: 100%;
@@ -29,7 +29,18 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-		background: ${Colors.OFF_WHITE};
+		background: ${({ pathname = 'default' }) => {
+			switch (pathname) {
+				case '/for-developers':
+					return Colors.VIOLET;
+
+				case '/for-partners':
+					return Colors.OCHRE;
+
+				default:
+					return Colors.OFF_WHITE;
+			}
+		}};
     }
 
 	#__next {
@@ -66,7 +77,7 @@ const Application = ({ Component, pageProps }: AppProps) => {
 	return (
 		<>
 			<Head />
-			<GlobalStyle />
+			<GlobalStyle pathname={router.pathname} />
 			<ThemeProvider theme={theme}>
 				<I18nProvider i18n={i18n} forceRenderOnLocaleChange={false}>
 					<Provider store={store}>

@@ -1,0 +1,19 @@
+.btn {
+	text-transform: uppercase;
+	transition: 0.25s ease;
+	background: rgba(0, 0, 0, 0);
+	border: 1px solid #000;
+	color: #000;
+	font-family: $font-family-monospace;
+	font-size: 36px;
+	line-height: 42px;
+	padding: 1.25rem 2rem;
+	border-radius: 2.625rem;
+	text-align: center;
+
+	&:hover {
+		background: rgba(0, 0, 0, 1);
+		color: #fff;
+		border-color: #000;
+	}
+}
