@@ -1,9 +1,8 @@
 import styled from 'styled-components';
+import { Form } from 'react-bootstrap';
 
 const S = {
-	Wrapper: styled.div`
-		padding: 24px 0;
-	`,
+	Form: styled(Form)``,
 };
 
 export { S };

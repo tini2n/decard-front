@@ -6,7 +6,7 @@ const Navigation = ({ fixedOffset }) => {
 	const router = useRouter();
 
 	return (
-		<S.Navigation fixedOffset={fixedOffset}>
+		<S.Navigation fixedOffset={fixedOffset} className={router.pathname === '/' ? '' : 'fixed'}>
 			<S.Link href='/products' className={router.pathname === '/products' ? 'active' : ''}>
 				PRODUCTS
 			</S.Link>

@@ -9,10 +9,11 @@ const S = {
 		font-family: 'IBM Plex Mono', monospace;
 		font-size: 36px;
 		line-height: 48px;
-		padding: 40px 0;
+		padding: 40px 5px;
 
 		&.fixed {
 			position: fixed;
+			left: 0;
 			top: ${(p) => p.fixedOffset}px;
 			width: calc(${Sizes.COL_WIDTH * 3} / ${Sizes.PAGE_MAX_WIDTH} * 100%);
 		}

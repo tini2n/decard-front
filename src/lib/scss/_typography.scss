@@ -1,4 +1,22 @@
 .heading {
 	font-size: 36px;
 	line-height: 42px;
+	font-weight: 400;
+}
+
+.super {
+	font-size: 64px;
+	line-height: 73px;
+}
+
+.mono {
+	font-family: $font-family-monospace;
+}
+
+.serif {
+	font-family: $font-family-sans-serif;
+}
+
+.uppercase {
+	text-transform: uppercase;
 }
