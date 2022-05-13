@@ -30,7 +30,7 @@ const S = {
 		flex-grow: 1;
 		width: calc(${Sizes.COL_WIDTH * 9} / ${Sizes.PAGE_MAX_WIDTH} * 100%);
 		overflow: hidden;
-		margin: 0 5px;
+		margin: 0 10px;
 	`,
 	Content: styled.main.attrs(() => ({ id: `content` }))`
 		flex-grow: 1;
