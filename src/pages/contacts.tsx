@@ -19,8 +19,8 @@ const Contacts = () => {
 			</Heading>
 			<Row className='mb-6'>
 				<Col md={6}>
-					<p className='d-block heading m-0'>info@decard.solutions</p>
-					<p className='d-block heading m-0'>work@decard.solutions</p>
+					<p className='d-block heading m-0'>info@decard.io</p>
+					<p className='d-block heading m-0'>work@decard.io</p>
 				</Col>
 				<Col md={6}>
 					<p className='d-block heading m-0'>(+3087)840 21 93</p>

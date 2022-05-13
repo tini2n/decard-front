@@ -19,7 +19,7 @@ const S = {
 			position: fixed;
 			bottom: 0;
 			left: 0;
-			width: calc(${Sizes.COL_WIDTH * 3} / ${Sizes.PAGE_MAX_WIDTH} * 100%);
+			width: calc(${Sizes.COL_WIDTH * 3} / ${Sizes.PAGE_MAX_WIDTH} * 100% - 5px);
 		}
 	`,
 };
