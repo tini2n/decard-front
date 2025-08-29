@@ -15,3 +15,5 @@ openssl req -x509 -out localhost.crt -keyout localhost.key \
 - Run local dev mode - `npm run start:dev`
 - Make local build – `npm run build`
 - Export static build – `npm run build:prod`
+
+deployed on Vercel (check account)
